@@ -1,6 +1,12 @@
 # Use NodeJS base image
 FROM node:13
 
+# Use NGINX image
+FROM nginx:alpine
+
+# copy nginx configuration
+COPY nginx.conf /etc/nginx/nginx.conf
+
 # Create app directory
 WORKDIR /usr/src/app
 
